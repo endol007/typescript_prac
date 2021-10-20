@@ -1,0 +1,71 @@
+{
+  "payload": [
+    {
+      "id": 1,
+      "title": "테스트",
+      "comment": "테스트 서버",
+      "name": "테스트"
+    },
+    {
+      "id": 2,
+      "title": "테스트2",
+      "comment": "테스트 서버2",
+      "name": "테스트2"
+    },
+    {
+      "id": 3,
+      "title": "테스트3",
+      "comment": "테스트서버3",
+      "name": "테스트3"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 4,
+      "title": "qwe",
+      "name": "qwe",
+      "comment": "qweeqw"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 5,
+      "title": "asdasd",
+      "name": "asd",
+      "comment": "qwe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 6,
+      "title": "asdqwe",
+      "name": "asdqwd",
+      "comment": "qweasd"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 7,
+      "title": "qweq",
+      "name": "qweqwe",
+      "comment": "asd"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 8,
+      "title": "eqwe",
+      "name": "qwewqe",
+      "comment": "qwewqe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 9,
+      "title": "qweqwweq",
+      "name": "sadasd",
+      "comment": "qweqwe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 10,
+      "title": "qwewqe",
+      "name": "qwe",
+      "comment": "qwe"
+    }
+  ]
+}
