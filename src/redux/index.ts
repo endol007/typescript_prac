@@ -1,8 +1,13 @@
 import { combineReducers } from "redux";
 import boards from "./board/reducer";
+import {createBrowserHistory} from "history";
+import { connectRouter } from "connected-react-router";
+
+export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
-    boards
+    boards,
+    router: connectRouter(history)
 })
 
 export default rootReducer;

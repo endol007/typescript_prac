@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import BoardWrite from './components/BoardWrite';
+import React from "react";
+import BoardWrite from "./components/BoardWrite";
 import Home from "./components/Home";
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import BoardDetail from './components/BoardDetail';
+import { Route, BrowserRouter} from "react-router-dom";
+import BoardDetail from "./components/BoardDetail";
+import { ConnectedRouter } from "connected-react-router";
+import { history } from "./redux/index";
 
 function App() {
 
   return (
-    <BrowserRouter>
-    <Switch>
+    <ConnectedRouter history={history}>
       <Route exact path="/" component={Home}/>
-      <Route path="/board" component={BoardWrite}/>
+      <Route exact path="/board" component={BoardWrite}/>
       <Route exact path="/detail" component={BoardDetail}/>
-      </Switch>
-    </BrowserRouter>
+    </ConnectedRouter>
   );
 }
 

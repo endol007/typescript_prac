@@ -66,6 +66,34 @@
       "title": "qwewqe",
       "name": "qwe",
       "comment": "qwe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 11,
+      "title": "qwe",
+      "name": "qwe",
+      "comment": "qwasdasdasdasddakndlkasndlkasnldanlskdnalsdnklsandlkasndlnaslkdnalksnd"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 12,
+      "title": "테스트4",
+      "name": "ㅁㅁㅁ",
+      "comment": "테스트서버4"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 13,
+      "title": "qwe",
+      "name": "qwe",
+      "comment": "qweeqweqweqwe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 14,
+      "title": "ㅂㅈㄷㅂㅈㄷ",
+      "name": "작성",
+      "comment": "가나다라마바"
     }
   ]
 }

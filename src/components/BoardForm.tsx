@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styled from 'styled-components';
 import { addBoard } from '../redux/board/actions';
 import { useDispatch } from 'react-redux';
-
+import { history } from '../redux/index';
 const BoardForm = (props: any) => {
     const dispatch = useDispatch();
     const [form, setForm] = useState({
@@ -23,7 +23,7 @@ const BoardForm = (props: any) => {
 
     const onSubmit = (e: FormEvent) => {
         e.preventDefault();
-        dispatch(addBoard(id, title, name, comment));
+        dispatch(addBoard(id, title, name, comment)); //클릭시 addBoard 디스패치
         setForm({
             id: id+1,
             title: '',
@@ -57,4 +57,5 @@ const InputWrap = styled.div`
     width: 230px;
     justify-content: space-between;
     display: flex;
+    margin-bottom: 20px;
 `;

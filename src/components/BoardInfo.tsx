@@ -3,14 +3,12 @@ import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux';
 import { requestData } from '../redux/board/actions';
+import { history } from '../redux/index';
 
-const BoardInfo = (props: any) => {
-    const history = props.props.history;
+const BoardInfo = () => {
     const dispatch = useDispatch();
     const boards = useSelector((state: RootState) => state.boards.payload);
-    useEffect(() => {
-        dispatch(requestData());
-    }, []);
+    //7. useSelector로 데이터 받아서 확인
 
     return(
         <BoardInfoWrap>
@@ -49,7 +47,7 @@ const BoardInfos = styled.div`
     min-width: 0;
     & > div{
         border: 1px solid black;
+        text-overflow: ellipsis;
         overflow: hidden;
-        word-wrap: break-word;
     }
 `;

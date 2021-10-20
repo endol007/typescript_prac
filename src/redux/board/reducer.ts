@@ -12,11 +12,10 @@ type Action =
 const boards = (state = initialState, action: Action) => {
     const newState: any = {...state}
     switch(action.type){
-        case BOARD_RESPONSE:
+        case BOARD_RESPONSE: // 6. receiveData로 스토어에 데이터 저장
             newState.payload = action.payload;
             return newState;
-        case ADD_BOARD:
-            console.log(action);
+        case ADD_BOARD_ASYNC:
             newState.payload = 
             [...newState.payload, 
                 {

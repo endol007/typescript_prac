@@ -11,7 +11,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga);  // 2. 사가 실행
 
 ReactDom.render(
     <Provider store={store}>

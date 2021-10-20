@@ -14,8 +14,8 @@ function* addBoardAsync(payload: {id: number, title: string, name: string, comme
 
 function* getApiData() {
     try {
-        const data = yield call(fetchData);
-        yield put(receiveData(data));
+        const data = yield call(fetchData); //4. fetchData => api요청하는 함수 실행
+        yield put(receiveData(data)); //5. call으로 받아온 data로 receiveData함수 실행
     }catch (err) {
         console.log(err);
     }
@@ -26,7 +26,7 @@ function* watchAddBoard() {
 }
 
 function* watchgetApiData() {
-    yield takeLatest(BOARD_REQUEST, getApiData);
+    yield takeLatest(BOARD_REQUEST, getApiData); // 3. BOARD_REQUEST로 getApiData실행
 }
 
 export function* rootSaga() {
