@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { history } from "../redux/index";
+import React from 'react';
+import styled from 'styled-components';
+import { history } from '../redux/index';
 
 const BoardDetail = (props: any) => {
-    const item = props.location.state;
-    return(
+  const item = props.location.state;
+  return (
         <Container>
             <Wrap>
             <Div>
@@ -21,11 +21,11 @@ const BoardDetail = (props: any) => {
             </Div>
             </Wrap>
             <button onClick={() => {
-                history.push("/")
+              history.push('/');
             }}>뒤로가기</button>
         </Container>
-    )
-}
+  );
+};
 
 export default BoardDetail;
 

@@ -1,37 +1,39 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styled from 'styled-components';
-import { addBoard } from '../redux/board/actions';
 import { useDispatch } from 'react-redux';
-import { history } from '../redux/index';
+import { addBoard } from '../redux/board/actions';
+
 const BoardForm = (props: any) => {
-    const dispatch = useDispatch();
-    const [form, setForm] = useState({
-        id: 0,
-        title: '',
-        name: '',
-        comment: ''
-    })
-    const {title, name, comment, id} = form;
+  const dispatch = useDispatch();
+  const [form, setForm] = useState({
+    id: 0,
+    title: '',
+    name: '',
+    comment: '',
+  });
+  const {
+    title, name, comment, id,
+  } = form;
 
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.target;
-        setForm({
-            ...form,
-            [name]: value
-        })
-    }
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
 
-    const onSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        dispatch(addBoard(id, title, name, comment)); //클릭시 addBoard 디스패치
-        setForm({
-            id: id+1,
-            title: '',
-            name: '',
-            comment: '',
-        })
-    }
-    return(
+  const onSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    dispatch(addBoard(id, title, name, comment)); // 클릭시 addBoard 디스패치
+    setForm({
+      id: id + 1,
+      title: '',
+      name: '',
+      comment: '',
+    });
+  };
+  return (
         <form onSubmit={onSubmit}>
             <InputWrap>
                 <span>제목 : </span>
@@ -45,11 +47,11 @@ const BoardForm = (props: any) => {
                 <span>작성자 : </span>
                 <input name="name" value={name} onChange={onChange}></input>
             </InputWrap>
-            
+
             <button type='submit'>작성</button>
         </form>
-    )
-}
+  );
+};
 
 export default BoardForm;
 

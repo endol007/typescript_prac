@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux';
@@ -6,31 +6,29 @@ import { requestData } from '../redux/board/actions';
 import { history } from '../redux/index';
 
 const BoardInfo = () => {
-    const dispatch = useDispatch();
-    const boards = useSelector((state: RootState) => state.boards.payload);
-    //7. useSelector로 데이터 받아서 확인
+  const dispatch = useDispatch();
+  const boards = useSelector((state: RootState) => state.boards.payload);
+  // 7. useSelector로 데이터 받아서 확인
 
-    return(
+  return (
         <BoardInfoWrap>
             <BoardInfos>
                 <div>제목</div>
                 <div><span>내용</span></div>
                 <div>작성자</div>
             </BoardInfos>
-            {boards.map((item: any) => {
-                return (
+            {boards.map((item: any) => (
                     <BoardInfos onClick={() => {
-                        history.push("/detail", item)
+                      history.push('/detail', item);
                     }}>
                     <div>{item.title}</div>
                     <div><span>{item.comment}</span></div>
                     <div>{item.name}</div>
                     </BoardInfos>
-                )
-            })}
+            ))}
         </BoardInfoWrap>
-    )
-}
+  );
+};
 
 export default React.memo(BoardInfo);
 

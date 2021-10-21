@@ -3,16 +3,14 @@ import styled from 'styled-components';
 import BoardForm from './BoardForm';
 import { history } from '../redux/index';
 
-const BoardWrite = () => {
-    return(
+const BoardWrite = () => (
         <Container>
             <BoardForm/>
             <button onClick={() => {
-                    history.push("/")
+              history.push('/');
             }}>홈으로</button>
         </Container>
-    )
-}
+);
 
 export default BoardWrite;
 
