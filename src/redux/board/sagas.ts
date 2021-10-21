@@ -18,7 +18,7 @@ function* getApiData() {
         const data = yield call(fetchData); //4. fetchData => api요청하는 함수 실행
         yield put(receiveData(data)); //5. call으로 받아온 data로 receiveData함수 실행
     }catch (err) {
-        console.log(err);
+        console.log(err);   
     }
 }
 
