@@ -1,5 +1,5 @@
-import { ADD_BOARD, ADD_BOARD_ASYNC, BOARD_REQUEST, BOARD_RESPONSE } from "./types";
-import { addBoard, receiveData, Action } from "./actions";
+import { ADD_BOARD_ASYNC, BOARD_RESPONSE } from "./types";
+import { Action } from "./actions";
 
 const initialState = {
     payload : [{id: 0, title: '제목', name: '작성자', comment: '내용'}]
