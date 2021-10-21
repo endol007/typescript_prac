@@ -1,13 +1,9 @@
 import { ADD_BOARD, ADD_BOARD_ASYNC, BOARD_REQUEST, BOARD_RESPONSE } from "./types";
-import { addBoard, receiveData } from "./actions";
+import { addBoard, receiveData, Action } from "./actions";
 
 const initialState = {
     payload : [{id: 0, title: '제목', name: '작성자', comment: '내용'}]
 }
-
-type Action = 
-    | ReturnType<typeof addBoard>
-    | ReturnType<typeof receiveData>
 
 const boards = (state = initialState, action: Action) => {
     const newState: any = {...state}
@@ -19,10 +15,10 @@ const boards = (state = initialState, action: Action) => {
             newState.payload = 
             [...newState.payload, 
                 {
-                    title: action.title, 
-                    name: action.name,
-                    comment: action.comment,
-                    id: action.id
+                    title: action.payload.title, 
+                    name: action.payload.name,
+                    comment: action.payload.comment,
+                    id: action.payload.id
                 }]
             return newState;
         default:

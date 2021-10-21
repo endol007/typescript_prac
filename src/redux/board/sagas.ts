@@ -1,12 +1,13 @@
 import { all, put, call, takeEvery, takeLatest } from "redux-saga/effects";
 import { receiveData } from "./actions";
-import fetchData, { sendData } from "./api";
+import fetchData from "./api";
+import axios from "axios";
 import { ADD_BOARD, ADD_BOARD_ASYNC, BOARD_REQUEST, BOARD_RESPONSE } from "./types";
 
 function* addBoardAsync(payload: {id: number, title: string, name: string, comment: string}) {
     try{
-        const data = yield call(sendData(payload))
-        yield put({type: ADD_BOARD_ASYNC, payload})
+        yield axios.post(`http://localhost:4000/payload`, payload)
+        yield put({ type: ADD_BOARD_ASYNC, payload})
     }catch(err){
         console.log(err);
     }
@@ -22,7 +23,7 @@ function* getApiData() {
 }
 
 function* watchAddBoard() {
-    yield takeEvery(ADD_BOARD, addBoardAsync);
+    yield takeLatest<any>(ADD_BOARD, addBoardAsync);
 }
 
 function* watchgetApiData() {

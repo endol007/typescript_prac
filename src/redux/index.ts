@@ -7,7 +7,7 @@ export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
     boards,
-    router: connectRouter(history)
+    router: connectRouter(history),
 })
 
 export default rootReducer;

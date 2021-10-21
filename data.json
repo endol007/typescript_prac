@@ -77,23 +77,100 @@
     {
       "type": "ADD_BOARD",
       "id": 12,
-      "title": "테스트4",
-      "name": "ㅁㅁㅁ",
-      "comment": "테스트서버4"
+      "title": "qwe",
+      "name": "qwdq",
+      "comment": "qwee"
     },
     {
       "type": "ADD_BOARD",
       "id": 13,
       "title": "qwe",
-      "name": "qwe",
-      "comment": "qweeqweqweqwe"
+      "name": "qweqwe",
+      "comment": "asd"
     },
     {
       "type": "ADD_BOARD",
       "id": 14,
-      "title": "ㅂㅈㄷㅂㅈㄷ",
-      "name": "작성",
-      "comment": "가나다라마바"
+      "title": "qwe",
+      "name": "svav",
+      "comment": "qewasdqwdasf"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 15,
+      "title": "qweqwe",
+      "name": "qweqweqwe",
+      "comment": "asdqwd"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 16,
+      "title": "qwe",
+      "name": "qweqwe",
+      "comment": "qweqwe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 17,
+      "title": "qweqwe",
+      "name": "asdqwe",
+      "comment": "dasdsa"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 18,
+      "title": "qwe",
+      "name": "asdasd",
+      "comment": "qwewq"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 19,
+      "title": "daczxc",
+      "name": "qwsczxc",
+      "comment": "qwedasasd"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 21,
+      "title": "dqwe",
+      "name": "qwqwee",
+      "comment": "dasdsad"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 22,
+      "title": "테스트5",
+      "name": "테스트",
+      "comment": "테스트서버5"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 23,
+      "title": "테스트6",
+      "name": "테스트6",
+      "comment": "테스트서버6"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 24,
+      "title": "wqe",
+      "name": "dqw",
+      "comment": "qwedasd"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 25,
+      "title": "asdasd",
+      "name": "asdasd",
+      "comment": "qweqwe"
+    },
+    {
+      "type": "ADD_BOARD",
+      "id": 26,
+      "title": "qwedq",
+      "name": "zxc",
+      "comment": "asdasd"
     }
   ]
 }
