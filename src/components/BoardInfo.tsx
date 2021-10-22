@@ -1,15 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../redux';
-import { requestData } from '../redux/board/actions';
 import { history } from '../redux/index';
 
 const BoardInfo = () => {
-  const dispatch = useDispatch();
-  const boards = useSelector((state: RootState) => state.boards.payload);
-  // 7. useSelector로 데이터 받아서 확인
+  const boards = useSelector((state: RootState) => state.board.data);
 
+  type boardData = {
+    type: string
+    payload: {
+      title: string,
+      name: string,
+      comment: string
+    },
+    id: number
+  }
   return (
         <BoardInfoWrap>
             <BoardInfos>
@@ -21,9 +27,9 @@ const BoardInfo = () => {
                     <BoardInfos onClick={() => {
                       history.push('/detail', item);
                     }}>
-                    <div>{item.title}</div>
-                    <div><span>{item.comment}</span></div>
-                    <div>{item.name}</div>
+                    <div>{item.payload.title}</div>
+                    <div><span>{item.payload.comment}</span></div>
+                    <div>{item.payload.name}</div>
                     </BoardInfos>
             ))}
         </BoardInfoWrap>

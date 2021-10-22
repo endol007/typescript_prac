@@ -1,176 +1,175 @@
 {
   "payload": [
     {
-      "id": 1,
-      "title": "테스트",
-      "comment": "테스트 서버",
-      "name": "테스트"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qwe",
+        "name": "zxczx",
+        "comment": "dasd"
+      },
+      "id": 35
     },
     {
-      "id": 2,
-      "title": "테스트2",
-      "comment": "테스트 서버2",
-      "name": "테스트2"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "asdasd",
+        "name": "qweqwe",
+        "comment": "asd"
+      },
+      "id": 36
     },
     {
-      "id": 3,
-      "title": "테스트3",
-      "comment": "테스트서버3",
-      "name": "테스트3"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qweqwe",
+        "name": "zxczxc",
+        "comment": "dasdasd"
+      },
+      "id": 37
     },
     {
-      "type": "ADD_BOARD",
-      "id": 4,
-      "title": "qwe",
-      "name": "qwe",
-      "comment": "qweeqw"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "zxczxc",
+        "name": "asdasd",
+        "comment": "qwewe"
+      },
+      "id": 38
     },
     {
-      "type": "ADD_BOARD",
-      "id": 5,
-      "title": "asdasd",
-      "name": "asd",
-      "comment": "qwe"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "zxczxc",
+        "name": "qwew",
+        "comment": "zxczxc"
+      },
+      "id": 39
     },
     {
-      "type": "ADD_BOARD",
-      "id": 6,
-      "title": "asdqwe",
-      "name": "asdqwd",
-      "comment": "qweasd"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qfdsfasdf",
+        "name": "asdasd",
+        "comment": "qeqd"
+      },
+      "id": 40
     },
     {
-      "type": "ADD_BOARD",
-      "id": 7,
-      "title": "qweq",
-      "name": "qweqwe",
-      "comment": "asd"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qwe",
+        "name": "asdasd",
+        "comment": "asdasd"
+      },
+      "id": 41
     },
     {
-      "type": "ADD_BOARD",
-      "id": 8,
-      "title": "eqwe",
-      "name": "qwewqe",
-      "comment": "qwewqe"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qweqwe",
+        "name": "wqeqwe",
+        "comment": "asdasd"
+      },
+      "id": 42
     },
     {
-      "type": "ADD_BOARD",
-      "id": 9,
-      "title": "qweqwweq",
-      "name": "sadasd",
-      "comment": "qweqwe"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qweqwdas",
+        "name": "qweqwe",
+        "comment": "asdasd"
+      },
+      "id": 43
     },
     {
-      "type": "ADD_BOARD",
-      "id": 10,
-      "title": "qwewqe",
-      "name": "qwe",
-      "comment": "qwe"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "asdasd",
+        "name": "zxczc",
+        "comment": "qweqwe"
+      },
+      "id": 44
     },
     {
-      "type": "ADD_BOARD",
-      "id": 11,
-      "title": "qwe",
-      "name": "qwe",
-      "comment": "qwasdasdasdasddakndlkasndlkasnldanlskdnalsdnklsandlkasndlnaslkdnalksnd"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qweqda",
+        "name": "zxczxc",
+        "comment": "asdasd"
+      },
+      "id": 45
     },
     {
-      "type": "ADD_BOARD",
-      "id": 12,
-      "title": "qwe",
-      "name": "qwdq",
-      "comment": "qwee"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qweqwe",
+        "name": "asdsad",
+        "comment": "qwedsa"
+      },
+      "id": 46
     },
     {
-      "type": "ADD_BOARD",
-      "id": 13,
-      "title": "qwe",
-      "name": "qweqwe",
-      "comment": "asd"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "dasd",
+        "name": "asd",
+        "comment": "qweqwe"
+      },
+      "id": 47
     },
     {
-      "type": "ADD_BOARD",
-      "id": 14,
-      "title": "qwe",
-      "name": "svav",
-      "comment": "qewasdqwdasf"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qwe",
+        "name": "zxc",
+        "comment": "adsdasd"
+      },
+      "id": 48
     },
     {
-      "type": "ADD_BOARD",
-      "id": 15,
-      "title": "qweqwe",
-      "name": "qweqweqwe",
-      "comment": "asdqwd"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qweq",
+        "name": "zxc",
+        "comment": "dasdasd"
+      },
+      "id": 49
     },
     {
-      "type": "ADD_BOARD",
-      "id": 16,
-      "title": "qwe",
-      "name": "qweqwe",
-      "comment": "qweqwe"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "가나다",
+        "name": "사아자",
+        "comment": "라마바"
+      },
+      "id": 50
     },
     {
-      "type": "ADD_BOARD",
-      "id": 17,
-      "title": "qweqwe",
-      "name": "asdqwe",
-      "comment": "dasdsa"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "가나다",
+        "name": "아자차",
+        "comment": "라마바"
+      },
+      "id": 51
     },
     {
-      "type": "ADD_BOARD",
-      "id": 18,
-      "title": "qwe",
-      "name": "asdasd",
-      "comment": "qwewq"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "ㅂㅈㄷ",
+        "name": "ㅋㅊㅌ",
+        "comment": "ㄴㅁㅇ"
+      },
+      "id": 52
     },
     {
-      "type": "ADD_BOARD",
-      "id": 19,
-      "title": "daczxc",
-      "name": "qwsczxc",
-      "comment": "qwedasasd"
-    },
-    {
-      "type": "ADD_BOARD",
-      "id": 21,
-      "title": "dqwe",
-      "name": "qwqwee",
-      "comment": "dasdsad"
-    },
-    {
-      "type": "ADD_BOARD",
-      "id": 22,
-      "title": "테스트5",
-      "name": "테스트",
-      "comment": "테스트서버5"
-    },
-    {
-      "type": "ADD_BOARD",
-      "id": 23,
-      "title": "테스트6",
-      "name": "테스트6",
-      "comment": "테스트서버6"
-    },
-    {
-      "type": "ADD_BOARD",
-      "id": 24,
-      "title": "wqe",
-      "name": "dqw",
-      "comment": "qwedasd"
-    },
-    {
-      "type": "ADD_BOARD",
-      "id": 25,
-      "title": "asdasd",
-      "name": "asdasd",
-      "comment": "qweqwe"
-    },
-    {
-      "type": "ADD_BOARD",
-      "id": 26,
-      "title": "qwedq",
-      "name": "zxc",
-      "comment": "asdasd"
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "zxczxc",
+        "name": "asdasd",
+        "comment": "qweqwe"
+      },
+      "id": 53
     }
   ]
 }

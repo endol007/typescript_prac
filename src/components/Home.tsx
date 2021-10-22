@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import BoardInfo from './BoardInfo';
-import { requestData } from '../redux/board/actions';
 import { history } from '../redux/index';
+import { boardDataActions } from '../redux/board/slice';
 
 const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(requestData()); // 1. 데이터 요청
+    dispatch(boardDataActions.getBoards());
   }, []);
   return (
         <Container>

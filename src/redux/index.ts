@@ -1,15 +1,29 @@
-import { combineReducers } from 'redux';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { createBrowserHistory } from 'history';
 import { connectRouter } from 'connected-react-router';
-import boards from './board/reducer';
+import createSagaMiddleware from '@redux-saga/core';
+import { rootSaga } from './board/sagastk';
+import boardSlice from './board/slice';
 
 export const history = createBrowserHistory();
 
+const sagaMiddleware = createSagaMiddleware();
+
 const rootReducer = combineReducers({
-  boards,
+  board: boardSlice.reducer,
   router: connectRouter(history),
 });
 
-export default rootReducer;
+const createStore = () => {
+    const store = configureStore({
+        reducer: rootReducer,
+        devTools: true,
+        middleware: [sagaMiddleware]
+    });
+    sagaMiddleware.run(rootSaga);
+    return store;
+}
+
+export default createStore;
 
 export type RootState = ReturnType<typeof rootReducer>

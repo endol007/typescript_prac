@@ -1,18 +1,19 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { addBoard } from '../redux/board/actions';
+import { boardDataActions } from '../redux/board/slice';
 
-const BoardForm = (props: any) => {
+const BoardForm = () => {
   const dispatch = useDispatch();
-  const [form, setForm] = useState({
-    id: 0,
+  type initialState = {title: string, name: string, comment: string}
+  const [form, setForm] = useState<initialState>({
     title: '',
     name: '',
     comment: '',
   });
+
   const {
-    title, name, comment, id,
+    title, name, comment
   } = form;
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -25,9 +26,8 @@ const BoardForm = (props: any) => {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    dispatch(addBoard(id, title, name, comment)); // 클릭시 addBoard 디스패치
+    dispatch(boardDataActions.sendBoards(form));
     setForm({
-      id: id + 1,
       title: '',
       name: '',
       comment: '',
@@ -37,15 +37,15 @@ const BoardForm = (props: any) => {
         <form onSubmit={onSubmit}>
             <InputWrap>
                 <span>제목 : </span>
-                <input name="title" value={title} onChange={onChange}></input>
+                <input name="title" value={title} onChange={onChange}/>
             </InputWrap>
             <InputWrap>
                 <span>내용 : </span>
-                <input name="comment" value={comment} onChange={onChange}></input>
+                <input name="comment" value={comment} onChange={onChange}/>
             </InputWrap>
             <InputWrap>
                 <span>작성자 : </span>
-                <input name="name" value={name} onChange={onChange}></input>
+                <input name="name" value={name} onChange={onChange}/>
             </InputWrap>
 
             <button type='submit'>작성</button>
