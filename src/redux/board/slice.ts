@@ -1,18 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { boardState } from "./types";
 
-export type boardData = {
-    title: string;
-    name: string;
-    comment: string;
-}
-
-export type BoardState = {
-    loading: boolean,
-    data: boardData[]
-    error: any;
-}
-
-const initialState: BoardState = {
+const initialState: boardState = {
     loading: false,
     data: [],
     error: null
@@ -33,7 +22,7 @@ const boardSlice = createSlice({
             state.error = payload;
             state.loading = false;
         },
-        sendBoards: (state) => {
+        sendBoards: (state, payload) => {
             state.loading = true;
         },
         sendBoardsSuccess: (state, { payload }) => {

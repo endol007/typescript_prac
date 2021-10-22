@@ -1,19 +1,11 @@
 import { boardDataActions } from './slice';
-import { call, put, takeLatest, all } from 'redux-saga/effects';
+import { put, takeLatest, all } from 'redux-saga/effects';
 import { fetchData, postData } from './api';
+import { boardType } from './types';
 
-type data = {
-    type: string,
-    payload: {
-      title: string,
-      name: string,
-      comment: string
-    },
-    id: number
-}
 function* getBoards(){
     try{
-        const data: data = yield fetchData()
+        const data: boardType = yield fetchData()
         yield put(boardDataActions.getBoardsSuccess(data));
     } catch (err) {
         yield put(boardDataActions.getBoardsError(err));
@@ -22,7 +14,7 @@ function* getBoards(){
 
 function* sendBoards(payload: {title: string, name: string, comment: string}) {
     try {
-      const response: data = yield postData(payload);
+      const response: boardType = yield postData(payload);
       yield put(boardDataActions.sendBoardsSuccess(response));
     } catch (err) {
       yield put(boardDataActions.sendBoardsError(err));
@@ -34,7 +26,7 @@ function* watchgetBoards() {
 }
 
 function* watchsendBoards() {
-    yield takeLatest(boardDataActions.sendBoards, sendBoards)
+    yield takeLatest<any>(boardDataActions.sendBoards, sendBoards)
 }
 export function* rootSaga() {
     yield all([watchgetBoards(), watchsendBoards()]);
