@@ -37,4 +37,4 @@ const boardSlice = createSlice({
 })
 
 export const boardDataActions = boardSlice.actions;
-export default boardSlice;
+export default boardSlice;  
