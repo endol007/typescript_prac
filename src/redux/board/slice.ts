@@ -18,7 +18,7 @@ const boardSlice = createSlice({
             state.data = payload;
             state.loading = false;
         },
-        getBoardsError: (state, {payload}) => {
+        getBoardsError: (state, { payload }) => {
             state.error = payload;
             state.loading = false;
         },

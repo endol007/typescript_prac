@@ -1,16 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import BoardForm from './BoardForm';
+import BoardForm from '../components/BoardForm';
 import { history } from '../redux/index';
 
-const BoardWrite = () => (
+const BoardWrite = () => {
+    const goBack = () => {
+        history.push('/');
+    }
+    return (
         <Container>
             <BoardForm/>
-            <button onClick={() => {
-              history.push('/');
-            }}>홈으로</button>
+            <button onClick={goBack}>홈으로</button>
         </Container>
-);
+    )
+};
 
 export default BoardWrite;
 

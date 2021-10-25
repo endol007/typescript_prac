@@ -1,21 +1,24 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
-import BoardInfo from './BoardInfo';
+import BoardInfo from '../components/BoardInfo';
 import { history } from '../redux/index';
 import { boardDataActions } from '../redux/board/slice';
 
 const Home = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(boardDataActions.getBoards());
-  }, []);
+  }, [dispatch]);
+
+  const goBoardWrite = () => {
+    history.push('/board');
+  }
+
   return (
         <Container>
-            <button onClick={() => {
-              history.push('/board');
-            }}>게시판 작성</button>
-
+            <button onClick={goBoardWrite}>게시판 작성</button>
             <BoardInfo/>
         </Container>
   );

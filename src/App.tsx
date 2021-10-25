@@ -4,7 +4,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import { history } from './redux/index';
 import {
   BoardDetail, BoardWrite, Home,
-} from './components/BoardIndex';
+} from './pages/BoardIndex';
 
 function App() {
   return (

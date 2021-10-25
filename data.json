@@ -170,6 +170,24 @@
         "comment": "qweqwe"
       },
       "id": 53
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "asdasd",
+        "name": "asdsa",
+        "comment": "qweqwe"
+      },
+      "id": 54
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qwe",
+        "name": "qwe",
+        "comment": "asd"
+      },
+      "id": 55
     }
   ]
 }

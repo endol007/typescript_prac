@@ -26,6 +26,10 @@ const BoardForm = () => {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
+    if(form.title === '' || form.name === '' || form.comment === ''){
+      alert('내용을 작성하세요')
+      return;
+    }
     dispatch(boardDataActions.sendBoards(form));
     setForm({
       title: '',
@@ -33,19 +37,20 @@ const BoardForm = () => {
       comment: '',
     });
   };
+
   return (
         <form onSubmit={onSubmit}>
             <InputWrap>
-                <span>제목 : </span>
-                <input name="title" value={title} onChange={onChange}/>
+                <label>제목 : </label>
+                <input placeholder="제목을 입력하세요" name="title" value={title} onChange={onChange}/>
             </InputWrap>
             <InputWrap>
-                <span>내용 : </span>
-                <input name="comment" value={comment} onChange={onChange}/>
+                <label>내용 : </label>
+                <input placeholder="내용을 입력하세요" name="comment" value={comment} onChange={onChange}/>
             </InputWrap>
             <InputWrap>
-                <span>작성자 : </span>
-                <input name="name" value={name} onChange={onChange}/>
+                <label>작성자 : </label>
+                <input placeholder="이름을 입력하세요" name="name" value={name} onChange={onChange}/>
             </InputWrap>
 
             <button type='submit'>작성</button>
