@@ -188,6 +188,60 @@
         "comment": "asd"
       },
       "id": 55
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qwe",
+        "name": "zxc",
+        "comment": "asdasd"
+      },
+      "id": 56
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "qwe",
+        "name": "zxc",
+        "comment": "asd"
+      },
+      "id": 57
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "asdasd",
+        "name": "zxc",
+        "comment": "qwe"
+      },
+      "id": 58
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "asd",
+        "name": "zxcqwe",
+        "comment": "qwe"
+      },
+      "id": 59
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "asd",
+        "name": "asd",
+        "comment": "qwe"
+      },
+      "id": 60
+    },
+    {
+      "type": "board/sendBoards",
+      "payload": {
+        "title": "가나",
+        "name": "마바",
+        "comment": "다라"
+      },
+      "id": 61
     }
   ]
 }

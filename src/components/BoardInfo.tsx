@@ -7,7 +7,8 @@ import { history } from '../redux/index';
 const BoardInfo = () => {
     const boards = useSelector((state: RootState) => state.board.data);
     const boardsData = () => {
-        return boards.map((item: any, idx: number) => (
+        if(boards){
+            return boards.map((item: any, idx: number) => (
                 <BoardInfos key={idx} onClick={() => {
                     history.push('/detail', item);
                     }}>
@@ -15,7 +16,8 @@ const BoardInfo = () => {
                     <span>{item.payload.comment}</span>
                     <span>{item.payload.name}</span>
                 </BoardInfos>
-        ))
+        ))}
+        else return null
     }
     return (
             <BoardInfoWrap>
@@ -24,7 +26,7 @@ const BoardInfo = () => {
                     <span>내용</span>
                     <span>작성자</span>
                 </BoardInfos>
-                {boards === [] ? null : boardsData()}
+                {boardsData()}
             </BoardInfoWrap>
     );
 };
