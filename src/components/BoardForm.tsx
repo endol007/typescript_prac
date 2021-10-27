@@ -1,10 +1,9 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styled from 'styled-components';
-import { useDispatch } from 'react-redux';
-import { boardDataActions } from '../redux/board/slice';
+import useStore from '../mobx/useStores';
 
 const BoardForm = () => {
-  const dispatch = useDispatch();
+  const {boardMobx} = useStore();
   type initialState = {title: string, name: string, comment: string}
   const [form, setForm] = useState<initialState>({
     title: '',
@@ -24,13 +23,13 @@ const BoardForm = () => {
     });
   };
 
-  const onSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if(form.title === '' || form.name === '' || form.comment === ''){
       alert('내용을 작성하세요')
       return;
     }
-    dispatch(boardDataActions.sendBoards(form));
+    boardMobx.postBoard(form);
     setForm({
       title: '',
       name: '',
@@ -39,7 +38,7 @@ const BoardForm = () => {
   };
 
   return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit}>
             <InputWrap>
                 <label>제목 : </label>
                 <input placeholder="제목을 입력하세요" name="title" value={title} onChange={onChange}/>

@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import BoardForm from '../components/BoardForm';
-import { history } from '../redux/index';
+import useStore from '../mobx/useStores';
 
-const BoardWrite = () => {
+const BoardWrite = (props: any) => {
+
     const goBack = () => {
-        history.push('/');
+        props.history.push('/');
     }
+
     return (
         <Container>
             <BoardForm/>

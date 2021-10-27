@@ -6,6 +6,10 @@
     ],
     "plugins": [
         "@babel/plugin-transform-runtime",
-        "@babel/plugin-transform-arrow-functions"
-    ]
+        "@babel/plugin-transform-arrow-functions",
+        ["@babel/plugin-proposal-class-properties", { "loose": false }]
+    ],
+    "assumptions": {
+        "setPublicClassFields": false
+    }
 }

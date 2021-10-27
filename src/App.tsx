@@ -11,7 +11,7 @@ function App() {
     <ConnectedRouter history={history}>
       <Route exact path="/" component={Home}/>
       <Route exact path="/board" component={BoardWrite}/>
-      <Route exact path="/detail" component={BoardDetail}/>
+      <Route exact path="/detail/:id" component={BoardDetail}/>
     </ConnectedRouter>
   );
 }

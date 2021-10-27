@@ -1,32 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
-import { RootState } from '../redux';
-import { history } from '../redux/index';
+import { useObserver } from 'mobx-react';
+import { boardData } from '../mobx/boardMobx';
+import useStore from '../mobx/useStores';
 
-const BoardInfo = () => {
-    const boards = useSelector((state: RootState) => state.board.data);
-    const boardsData = () => {
-        if(boards){
-            return boards.map((item: any, idx: number) => (
-                <BoardInfos key={idx} onClick={() => {
-                    history.push('/detail', item);
-                    }}>
-                    <span>{item.payload.title}</span>
-                    <span>{item.payload.comment}</span>
-                    <span>{item.payload.name}</span>
-                </BoardInfos>
-        ))}
-        else return null
-    }
-    return (
+const BoardInfo = ({props}: any) => {
+    const {boardMobx} = useStore();
+
+    useEffect(() => {
+        boardMobx.getBoard();
+    }, [])
+    return useObserver(() =>
             <BoardInfoWrap>
                 <BoardInfos>
                     <span>제목</span>
                     <span>내용</span>
                     <span>작성자</span>
                 </BoardInfos>
-                {boardsData()}
+                {boardMobx.board ? 
+                    boardMobx.board.map((item: boardData, idx: number) => {
+                        return <BoardInfos key={idx} onClick={() => {
+                                    props.history.push({
+                                        pathname: `/detail/${item.id}`, 
+                                        state: {
+                                           title: item.title,
+                                           name: item.name,
+                                           comment: item.comment
+                                        }}
+                                    );
+                                    }}>
+                                    <span>{item.title}</span>
+                                    <span>{item.comment}</span>
+                                    <span>{item.name}</span>
+                                </BoardInfos>
+                    })
+                : null}
             </BoardInfoWrap>
     );
 };

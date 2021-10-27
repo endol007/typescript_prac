@@ -1,247 +1,142 @@
 {
-  "payload": [
+  "boards": [
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qwe",
-        "name": "zxczx",
-        "comment": "dasd"
-      },
-      "id": 35
+      "title": "Mobx",
+      "name": "Mobx",
+      "comment": "Mobx업데이트33",
+      "id": 2
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "asdasd",
-        "name": "qweqwe",
-        "comment": "asd"
-      },
-      "id": 36
+      "title": "Mobx",
+      "name": "Mobx",
+      "comment": "Mobx테스트2",
+      "id": 3
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qweqwe",
-        "name": "zxczxc",
-        "comment": "dasdasd"
-      },
-      "id": 37
+      "title": "Mobx",
+      "name": "Mobx",
+      "comment": "Mobx업데이트11",
+      "id": 4
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "zxczxc",
-        "name": "asdasd",
-        "comment": "qwewe"
-      },
-      "id": 38
+      "title": "123",
+      "name": "789",
+      "comment": "456",
+      "id": 5
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "zxczxc",
-        "name": "qwew",
-        "comment": "zxczxc"
-      },
-      "id": 39
+      "title": "xczc",
+      "name": "qwe",
+      "comment": "asdasd",
+      "id": 6
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qfdsfasdf",
-        "name": "asdasd",
-        "comment": "qeqd"
-      },
-      "id": 40
+      "title": "zxczxc",
+      "name": "asdas",
+      "comment": "qweqwe",
+      "id": 7
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qwe",
-        "name": "asdasd",
-        "comment": "asdasd"
-      },
-      "id": 41
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 8
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qweqwe",
-        "name": "wqeqwe",
-        "comment": "asdasd"
-      },
-      "id": 42
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 9
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qweqwdas",
-        "name": "qweqwe",
-        "comment": "asdasd"
-      },
-      "id": 43
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 10
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "asdasd",
-        "name": "zxczc",
-        "comment": "qweqwe"
-      },
-      "id": 44
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 11
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qweqda",
-        "name": "zxczxc",
-        "comment": "asdasd"
-      },
-      "id": 45
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 12
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qweqwe",
-        "name": "asdsad",
-        "comment": "qwedsa"
-      },
-      "id": 46
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 13
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "dasd",
-        "name": "asd",
-        "comment": "qweqwe"
-      },
-      "id": 47
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 14
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qwe",
-        "name": "zxc",
-        "comment": "adsdasd"
-      },
-      "id": 48
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 17
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qweq",
-        "name": "zxc",
-        "comment": "dasdasd"
-      },
-      "id": 49
+      "title": "qwe",
+      "name": "zxc",
+      "comment": "asd",
+      "id": 18
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "가나다",
-        "name": "사아자",
-        "comment": "라마바"
-      },
-      "id": 50
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 19
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "가나다",
-        "name": "아자차",
-        "comment": "라마바"
-      },
-      "id": 51
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 20
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "ㅂㅈㄷ",
-        "name": "ㅋㅊㅌ",
-        "comment": "ㄴㅁㅇ"
-      },
-      "id": 52
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 21
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "zxczxc",
-        "name": "asdasd",
-        "comment": "qweqwe"
-      },
-      "id": 53
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 22
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "asdasd",
-        "name": "asdsa",
-        "comment": "qweqwe"
-      },
-      "id": 54
+      "title": "asdad",
+      "name": "zxcczx",
+      "comment": "qweqwe",
+      "id": 23
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qwe",
-        "name": "qwe",
-        "comment": "asd"
-      },
-      "id": 55
+      "title": "qasdasd",
+      "name": "zxczxc",
+      "comment": "qwe",
+      "id": 24
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qwe",
-        "name": "zxc",
-        "comment": "asdasd"
-      },
-      "id": 56
+      "title": "11",
+      "name": "33",
+      "comment": "22",
+      "id": 25
     },
     {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "qwe",
-        "name": "zxc",
-        "comment": "asd"
-      },
-      "id": 57
-    },
-    {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "asdasd",
-        "name": "zxc",
-        "comment": "qwe"
-      },
-      "id": 58
-    },
-    {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "asd",
-        "name": "zxcqwe",
-        "comment": "qwe"
-      },
-      "id": 59
-    },
-    {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "asd",
-        "name": "asd",
-        "comment": "qwe"
-      },
-      "id": 60
-    },
-    {
-      "type": "board/sendBoards",
-      "payload": {
-        "title": "가나",
-        "name": "마바",
-        "comment": "다라"
-      },
-      "id": 61
+      "title": "111111",
+      "name": "33333",
+      "comment": "22222",
+      "id": 26
     }
   ]
 }

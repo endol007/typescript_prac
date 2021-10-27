@@ -1,30 +1,79 @@
-import React from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import useStore from '../mobx/useStores';
 import styled from 'styled-components';
-import { history } from '../redux/index';
-import { boardType } from '../redux/board/types';
+import { useObserver } from 'mobx-react';
 
-const BoardDetail = (props: {location: {state: boardType} }) => {
+const BoardDetail = (
+    props: {
+        history: any, 
+        location: {
+            state: {title: string, comment: string, name: string}
+        }
+        match: {params: {id: number}
+        }
+    }) => {
+    type inputFormState = {title: string, name: string, comment: string}
+    const [form, setForm] = useState<inputFormState>({
+        title: '',
+        name: '',
+        comment: ''
+    })
     const item = props.location.state;
+    const {boardMobx} = useStore();
+
     const goBack = () => {
-        history.push('/');
+        props.history.push('/');
     }
-    return (
+    const { title, comment, name} = form;
+
+    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const {name, value} = e.target;
+        setForm({
+            ...form,
+            [name]: value,
+        })
+    }
+
+    const deleteBoard = () => {
+        boardMobx.deleteBoard(props.match.params.id);
+        props.history.push('/');
+    }
+
+    const onSubmit = (e: FormEvent) => {
+        e.preventDefault();
+        boardMobx.updateBoard(props.match.params.id, form);
+        setForm({
+            title: '',
+            name: '',
+            comment: ''
+        })
+        props.history.push('/');
+    }
+
+    return useObserver(() =>
             <Container>
                 <Wrap>
                 <Div>
                     <span>제목</span>
-                    <span>{item.payload.title}</span>
+                    <span>{item.title}</span>
                 </Div>
                 <Div>
                     <span>내용</span>
-                    <span>{item.payload.comment}</span>
+                    <span>{item.comment}</span>
                 </Div>
                 <Div>
                     <span>작성자</span>
-                    <span>{item.payload.name}</span>
+                    <span>{item.name}</span>
                 </Div>
                 </Wrap>
                 <button onClick={goBack}>뒤로가기</button>
+                <button onClick={deleteBoard}>삭제</button><br/>
+                <form onSubmit={onSubmit}>
+                    <input placeholder="제목을 입력하세요" name="title" value={title} onChange={onChange}/><br/>
+                    <input placeholder="내용을 입력하세요" name="comment" value={comment} onChange={onChange}/><br/>
+                    <input placeholder="이름을 입력하세요" name="name" value={name} onChange={onChange}/><br/>
+                    <button type='submit'>수정</button>
+                </form>
             </Container>
     );
 };
