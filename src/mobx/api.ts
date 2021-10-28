@@ -27,3 +27,11 @@ export const updateBoardData = async (id: number, board: {title: string, comment
         console.log(err);
     } 
 }
+
+export const deleteBoardData = async (id: number) => {
+    try{
+        await axios.delete(`http://localhost:4000/boards/${id}`);
+    } catch (err) {
+        console.log(err)
+    }
+}

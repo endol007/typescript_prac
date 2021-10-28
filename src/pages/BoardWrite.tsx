@@ -4,14 +4,18 @@ import BoardForm from '../components/BoardForm';
 import useStore from '../mobx/useStores';
 
 const BoardWrite = (props: any) => {
-
+    const {boardMobx} = useStore();
     const goBack = () => {
         props.history.push('/');
     }
 
+    const onSubmit = (form:{title: string, name: string, comment: string}) => {
+        boardMobx.postBoard(form);
+    }
+
     return (
         <Container>
-            <BoardForm/>
+            <BoardForm onSubmit={onSubmit}/>
             <button onClick={goBack}>홈으로</button>
         </Container>
     )

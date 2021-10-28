@@ -2,6 +2,8 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import useStore from '../mobx/useStores';
 import styled from 'styled-components';
 import { useObserver } from 'mobx-react';
+import '../styles/styles.css';
+import BoardForm from '../components/BoardForm';
 
 const BoardDetail = (
     props: {
@@ -12,42 +14,22 @@ const BoardDetail = (
         match: {params: {id: number}
         }
     }) => {
-    type inputFormState = {title: string, name: string, comment: string}
-    const [form, setForm] = useState<inputFormState>({
-        title: '',
-        name: '',
-        comment: ''
-    })
+    const [updateToggle, setUpdateToggle] = useState<Boolean>(false);
     const item = props.location.state;
+    const boardId = props.match.params.id;
     const {boardMobx} = useStore();
-
-    const goBack = () => {
-        props.history.push('/');
-    }
-    const { title, comment, name} = form;
-
-    const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const {name, value} = e.target;
-        setForm({
-            ...form,
-            [name]: value,
-        })
-    }
+    
+    const Toggle = () => setUpdateToggle(!updateToggle);
+    const goBack = () => { props.history.push('/'); }
 
     const deleteBoard = () => {
-        boardMobx.deleteBoard(props.match.params.id);
-        props.history.push('/');
+        boardMobx.deleteBoard(boardId);
+        goBack();
     }
 
-    const onSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        boardMobx.updateBoard(props.match.params.id, form);
-        setForm({
-            title: '',
-            name: '',
-            comment: ''
-        })
-        props.history.push('/');
+    const onSubmit = (form: {title: string, name: string, comment: string}) => {
+        boardMobx.updateBoard(boardId, form);
+        goBack();
     }
 
     return useObserver(() =>
@@ -67,13 +49,11 @@ const BoardDetail = (
                 </Div>
                 </Wrap>
                 <button onClick={goBack}>뒤로가기</button>
-                <button onClick={deleteBoard}>삭제</button><br/>
-                <form onSubmit={onSubmit}>
-                    <input placeholder="제목을 입력하세요" name="title" value={title} onChange={onChange}/><br/>
-                    <input placeholder="내용을 입력하세요" name="comment" value={comment} onChange={onChange}/><br/>
-                    <input placeholder="이름을 입력하세요" name="name" value={name} onChange={onChange}/><br/>
-                    <button type='submit'>수정</button>
-                </form>
+                <button onClick={deleteBoard}>삭제</button>
+                <button onClick={Toggle}>수정</button><br/>
+                <div className={updateToggle ? "updateForm" : "updateFormHidden"}>
+                    <BoardForm onSubmit={onSubmit}/>
+                </div>
             </Container>
     );
 };
