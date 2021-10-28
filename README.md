@@ -105,6 +105,7 @@ module.exports = {
 };
 ~~~
 #### typescript config
+~~~
 {
   "compilerOptions": {
     "target": "es5",
@@ -123,6 +124,7 @@ module.exports = {
   "include": ["../src/**/*"],
   "exclude": ["../node_modules"]
 }
+~~~
 #### react 실행명령어 세팅
 ~~~
 "scripts": {
