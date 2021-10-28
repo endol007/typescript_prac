@@ -1,6 +1,7 @@
 import { observable } from 'mobx';
 import axios from 'axios';
 import { 
+    deleteBoardData,
     getBoardsData, postBoardData, updateBoardData
 } from './api';
 
@@ -43,11 +44,7 @@ export const boardMobx = observable<Todo>({
     },
     
     deleteBoard(id) {
-        const index = this.board.findIndex((p) => p.id === id);
-        axios.delete(`http://localhost:4000/boards/${id}`)
-        if(id !== -1){
-            this.board.splice(index, 1);
-        }
+        deleteBoardData(id)
     },
 
     updateBoard(id, board) {

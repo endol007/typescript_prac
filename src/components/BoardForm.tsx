@@ -2,8 +2,11 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styled from 'styled-components';
 import useStore from '../mobx/useStores';
 
-const BoardForm = () => {
-  const {boardMobx} = useStore();
+type BoardFormProps = {
+  onSubmit: (board: {title: string, name: string, comment: string}) => void;
+}
+
+const BoardForm = ({onSubmit}: BoardFormProps) => {
   type initialState = {title: string, name: string, comment: string}
   const [form, setForm] = useState<initialState>({
     title: '',
@@ -11,16 +14,11 @@ const BoardForm = () => {
     comment: '',
   });
 
-  const {
-    title, name, comment
-  } = form;
+  const { title, name, comment } = form;
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = (e: FormEvent) => {
@@ -29,12 +27,8 @@ const BoardForm = () => {
       alert('내용을 작성하세요')
       return;
     }
-    boardMobx.postBoard(form);
-    setForm({
-      title: '',
-      name: '',
-      comment: '',
-    });
+    onSubmit(form);
+    setForm({title: '', name: '', comment: ''});
   };
 
   return (

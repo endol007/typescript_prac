@@ -9,7 +9,7 @@ const Home = (props: any) => {
   }
 
   return (
-        <Container>
+        <Container className="m-5 bg-blue-100 text-black-500">
             <button onClick={goBoardWrite}>게시판 작성</button>
             <BoardInfo props={props}/>
         </Container>
