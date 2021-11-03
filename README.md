@@ -24,7 +24,22 @@ Javascript 애플리케이션을 위한 정적 모듈 번들러이다. webpack�
 ![redux](https://res.cloudinary.com/practicaldev/image/fetch/s--fCDvEpjd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.stack.imgur.com/LNQwH.png)
 
 ## Redux saga
-
+- Side Effect(Data fetching, browser cache 접근 등 비동기 동작)를 담당하는 별도의 쓰레드 개념
+- 비동기 흐름을 쉽게 테스트할 수 있고, 액션을 순수하게 유지한다.
+#### 실행흐름
+~~~
+1. Redux Store와 Saga middleware 연결
+2. 컴포넌트에서 액션 디스패치
+3. 액션을 지켜보면서 Fetch등 사이드 이펙트를 호출하는 Saga 실행 (Worker Saga)
+4. takeEvery 또는 takeLatest등 헬퍼함수 통해서 테스트 생성
+~~~
+- Worker Saga
+ call, put 등 이펙트를 이용해서 순수 자바스크립트 객체를 리턴
+- Watcher Saga
+ 각각의 액션에 대한 태스크 생성
+- Root Saga
+ Saga가 호출된 결과배열 반환
+ 
 
 ## Postcss
 Postcss는 js플러그인을 사용하여 css를 변환시키는 툴이다. Postcss는 언어가 아니라 자동을 신기술 css를 호환가능하도록 변환시켜주는 플러그인이다.
