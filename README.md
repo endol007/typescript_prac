@@ -20,6 +20,7 @@ Javascript 애플리케이션을 위한 정적 모듈 번들러이다. webpack�
 - 상태 변경 정보인 Action
 - Action을 Store에 반영하는 Dispatcher
 - Action이 Store에 어떤 변화를 줄지 알려주는 Reducer
+
 ![redux](https://res.cloudinary.com/practicaldev/image/fetch/s--fCDvEpjd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.stack.imgur.com/LNQwH.png)
 
 ## Redux saga
